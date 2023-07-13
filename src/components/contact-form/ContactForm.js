@@ -34,7 +34,6 @@ class ContactForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
     const phoneBookNames = this.props.contacts;
-    console.log(phoneBookNames);
     const matchPerson = phoneBookNames.find(
       pers => pers.name === this.state.name
     );
