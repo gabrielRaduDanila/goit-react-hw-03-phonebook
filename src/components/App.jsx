@@ -14,10 +14,10 @@ export class App extends Component {
   }
 
   addContact = contact => {
-    const tempContacs = [...this.state.contacts];
-    tempContacs.push(contact);
-    this.setState({
-      contacts: tempContacs,
+    this.setState(prevState => {
+      const tempContacs = [...prevState.contacts];
+      tempContacs.push(contact);
+      return { contacts: tempContacs };
     });
   };
   addFilterValue = value => {

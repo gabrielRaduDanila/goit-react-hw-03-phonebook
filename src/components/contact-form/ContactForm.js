@@ -34,11 +34,12 @@ class ContactForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
     const phoneBookNames = this.props.contacts;
+    console.log(phoneBookNames);
     const matchPerson = phoneBookNames.find(
       pers => pers.name === this.state.name
     );
     if (matchPerson) {
-      alert(`${matchPerson} is already in contacts`);
+      alert(`${matchPerson.name} is already in contacts`);
       return;
     }
     const person = {
